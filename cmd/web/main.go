@@ -45,7 +45,7 @@ func (app *application) serve() error {
 		ReadHeaderTimeout: 5 * time.Second,
 		WriteTimeout:      5 * time.Second,
 	}
-	app.infoLog.Println("Statring server in %s modeo on port %d", app.config.env, app.config.port)
+	app.infoLog.Printf(fmt.Sprintf("Statring server in %s mode on port %d", app.config.env, app.config.port))
 	return srv.ListenAndServe()
 }
 func main() {
